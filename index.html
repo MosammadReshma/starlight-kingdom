@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FIRST GAME!!!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <section class="scene active"> <!-- Instructions for the game -->
+        <div id="instructions">
+            <h2><b>How To Play:</b></h2>
+            <p class="rule-title"><b>Goal</b> <br>
+                • Catch the Great yellow Star.<br>
+                • Reach the target score. 
+            </p>
+
+            <p class="rule-title"><b class="title">Be Careful</b><br>
+                • Avoid pink stars; they reduce 2 points.<br>
+                • Time is limited, so move wisely. <br>
+                • you must complete both of the goals to win.
+            </p>
+
+            <p class="rule-title"><b class="title">Types of Star</b><br>
+                • The Blue stars: Good stars that gives +1 points.<br>
+                • The Green stars: Good stars that gives +2 points.<br>
+                • The Pink stars: Bad stars that takes away -2 points.<br>
+                • The Great star: The special star that ends the game.
+            </p>
+
+            <p class="rule-title"><b class="title">Tips</b><br>
+                • Every star matters. Choose your path carefully.
+            </p>
+
+            <button id="next">Next</button>
+        </div>
+    </section>
+
+    <section id="gender" class="scene">
+  <div class="box">
+    <h2>Choose your destiny ✨</h2>
+
+    <label>
+      <input type="radio" name="gender" value="male"> Prince
+    </label>
+
+    <label>
+      <input type="radio" name="gender" value="female"> Princess
+    </label>
+
+    <button id="continue">Continue</button>
+  </div>
+</section>
+
+
+    <section id="story" class="scene"> <!--Story section-->
+        <div id="story-box">
+        <p id="storyline"></p>
+        <button id="skip-button" type="button">Skip</button>
+    </div>
+    
+</section>
+
+<div id="starting" class="scene">
+<button id="start-button" onclick="startGame()">Start</button>
+</div>
+
+    <section id="game" class="scene">
+    <div id="star-container"></div>
+
+<div id="dashboard">
+  <div> Time: <span id="time">60</span></div>
+  <div> Score: <span id="score">0</span></div>
+  <div> Left: <span id="remaining">0</span></div>
+</div>
+
+</section>
+
+    <section id="result" class="scene">
+        <h1>Game Over</h1>
+        <p id="result-message"></p>
+        <button id="restart-button" onclick="restartGame()">Play Again</button>
+    </section>
+
+    <audio id="intro-music" src="intro-music.mp3" loop></audio>
+    <audio id="story-music" src="story-music.mp3" loop></audio>
+    <audio id="game-music" src="game-music.mp3" loop></audio>
+    <audio id="result-music" src="result-music.mp3"></audio>
+    <audio class="good-star" src="good-star.mp3"></audio>
+    <audio class= "good-star" src="good-star.mp3"></audio>
+    <audio id="bad-star" src="bad-star.mp3"></audio>
+    <audio id="great-star" src="great-star.mp3"></audio>
+    <audio id="typing" src="typing.mp3"></audio>
+    <audio id="click" src="click.mp3"></audio>
+
+    <div id="stars">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
